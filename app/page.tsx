@@ -4,5 +4,9 @@ import Layout from "@/components/Layout";
 import { MusicPlayerWrapper } from "@/components/music-player/Lecteur";
 
 export default function Home() {
-  return <MusicPlayerWrapper />;
+  return (
+    <div>
+      <MusicPlayerWrapper />
+    </div>
+  );
 }

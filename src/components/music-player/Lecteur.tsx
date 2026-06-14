@@ -39,7 +39,7 @@ const music = [
 
 export function MusicPlayerWrapper() {
   return (
-    <div className="min-h-screen flex flex-col  items-center justify-center relative">
+    <div className="min-h-dvh flex flex-col  items-center justify-center relative">
       <MusicPlayer tracks={playlist} fallbackCover="/default-cover.jpg" />
       {/* <List /> */}
     </div>

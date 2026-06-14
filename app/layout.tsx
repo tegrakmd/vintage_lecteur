@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Layout from "@/components/Layout";
-import Container from "@/components/Container";
+// import Container from "@/components/Container";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -39,7 +39,7 @@ export default function RootLayout({
         "font-sans",
         inter.variable
       )}>
-      <body className="min-h-full flex w-full flex-col">
+      <body className="h-full flex w-full flex-col">
         <Image
           src="/vv.jpg"
           alt="Background"
@@ -48,9 +48,9 @@ export default function RootLayout({
           className="absolute inset-0 z-[-1]"
         />
 
-        <Container>
-          <Layout>{children}</Layout>
-        </Container>
+        {/* <Container> */}
+        <Layout>{children}</Layout>
+        {/* </Container> */}
         {/* <div className="from-background pointer-events-none fixed inset-x-0 bottom-0 z-40 h-10 bg-linear-to-t to-transparent [mask-image:linear-gradient(to_top,black_10%,transparent)] opacity-100 backdrop-blur-[5px] select-none dark:[mask-image:linear-gradient(to_top,black_20%,transparent)]" /> */}
       </body>
     </html>
