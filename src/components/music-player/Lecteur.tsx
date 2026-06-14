@@ -39,9 +39,16 @@ const music = [
 
 export function MusicPlayerWrapper() {
   return (
-    <div className="min-h-dvh flex flex-col  items-center justify-center relative">
-      <MusicPlayer tracks={playlist} fallbackCover="/default-cover.jpg" />
+    <div className="min-h-dvh  overflow-hidden flex flex-col  items-center justify-center relative">
+      <div className="relative z-10 w-full max-w-md px-4">
+        <MusicPlayer tracks={playlist} fallbackCover="/default-cover.jpg" />
+      </div>
       {/* <List /> */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center pointer-events-none z-[0]">
+        <h1 className="text-[25rem] md:text-[60rem] font-chunky-retro font-normal text-white opacity-60 tracking-[-0.02em]  select-none pointer-events-none">
+          Retro
+        </h1>
+      </div>
     </div>
   );
 }
